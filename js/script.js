@@ -115,9 +115,14 @@
 
 // console.log(myTitle);
 // Homework
-let a = 1;
-let b = 2;
-console.log(b, a);
+let a = 3;
+let b = 5;
+
+let temp = a;
+a = b;
+b = temp;
+
+console.log(a, b);
 
 function isEven(num) {
   return num % 2 === 0;
@@ -198,13 +203,14 @@ function countProps(obj) {
 console.log(countProps({ a: 1, b: 2, c: 3 }));
 
 function printTo(n) {
-  let count = 1;
-  while (count < n) {
-    console.log(`Число ${count}`);
-    count++;
+  let i = 1;
+  while (i <= n) {
+    console.log(i);
+    i++;
   }
 }
-printTo(10);
+
+printTo(7);
 
 function manualFindIndex(array, value) {
   for (let i = 0; i < array.length; i++) {
@@ -215,3 +221,13 @@ function manualFindIndex(array, value) {
 }
 
 console.log(manualFindIndex([1, 2, 3, 4, 5], 4));
+
+// сумма
+
+let sum = 0;
+for (let i = 0; i <= 100; i++) {
+  sum = sum + i;
+  //sum += i;
+}
+
+console.log(sum);
